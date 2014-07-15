@@ -1,3 +1,5 @@
+library(LaF)
+
 ReadData <- function() {
   # Assuming that the necessary data was downloaded already, it reads
   # all necessary files into data frames.
@@ -27,13 +29,19 @@ ReadData <- function() {
   variable.labels <- read.delim("UCI HAR Dataset/features.txt",
                                 header=FALSE, sep=" ",
                                 col.names=c("id", "name"))
+  # Get rid of brackets in variable labels
+  variable.labels$name <- gsub("\\(\\)", "", variable.labels$name)
   
   training.subject <- read.delim("UCI HAR Dataset/train/subject_train.txt", 
                                  header=FALSE, 
                                  col.names="subject.id")
-  training.x <- read.delim("UCI HAR Dataset/train/X_train.txt",
-                           header=FALSE, 
-                           col.names=variable.labels$name)
+  # LaF package was necessary because read.fwf wasn't able to import
+  # the training set due to memory shortage
+  laf.data <- laf_open_fwf("UCI HAR Dataset/train/X_train.txt",
+                           column_types=rep("numeric", nrow(variable.labels)),
+                           column_widths=rep(16, nrow(variable.labels)),
+                           column_names=as.character(variable.labels$name))
+  training.x <- laf.data[,]  # load all data in training.x
   training.y <- read.delim("UCI HAR Dataset/train/y_train.txt",
                            header=FALSE, 
                            col.names="activity.id")
@@ -41,9 +49,11 @@ ReadData <- function() {
   test.subject <- read.delim("UCI HAR Dataset/test/subject_test.txt",
                              header=FALSE, 
                              col.names="subject.id")
-  test.x <- read.delim("UCI HAR Dataset/test/X_test.txt",
-                       header=FALSE, 
-                       col.names=variable.labels$name)
+  laf.data <- laf_open_fwf("UCI HAR Dataset/test/X_test.txt",
+                           column_types=rep("numeric", nrow(variable.labels)),
+                           column_widths=rep(16, nrow(variable.labels)),
+                           column_names=as.character(variable.labels$name))
+  test.x <- laf.data[,]
   test.y <- read.delim("UCI HAR Dataset/test/y_test.txt",
                        header=FALSE, 
                        col.names="activity.id")
