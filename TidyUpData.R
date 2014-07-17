@@ -2,6 +2,8 @@
 # Coursera course "Getting and Cleaning Data"
 # Course project
 
+library(reshape2)
+
 TidyUpData <- function(merged.data) {
   # Tidies up the data as requested by the course project.
   #
