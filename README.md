@@ -17,10 +17,35 @@ Each of the first four scripts contain only a function named like the file name.
 The fifth script "run_analysis.R" uses these functions to create a tidy dataset
 and export it to a file.
 
-Below a detailed description of each script can be found.
+
+Data aquisition
+---------------
+The data used in this project was obtained from a project called 
+[Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) hosted by
+the UCI machine learning repository.
+
+The data file itself is downloaded from:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+For this project, the file was downloaded at:
+2014-07-18 09:48:25 CEST.
+
+In the case the link has changed since then, you can change
+the value of variable `source.url` in the script "DownloadAndUnzipData.R".
 
 
-Description of the R scripts
+How to use the script
+---------------------
+Just run the script "run_analysis.R". It will make sure, that the required data
+file is downloaded and unziped, merge and tidy up the data and stores the
+tidy data set into a file called "tidy.csv". If you want to use another file
+name, just change the second parameter of the function call 
+to `ExportDataAsFile()`.
+
+
+
+
+Detailed description of the R scripts
 ----------------------------
 In this section a detailed description of each script is given. For a detailed
 explanation of the merged and tidied up data please take a look at 
@@ -36,8 +61,7 @@ After the download is finished, the file is unziped.
 ### ReadAndMergeData.R
 This script includes another function called `ReadAndMergeData()`. As the name
 lets assume, it reads all necessary data to merge the training and test sets
-and merges the data. It also provides the merged data with some human readable labels for activity and the column names. The column names of the measurement variables are only slightly edited to get rid of some unwanted symbols. 
-Overall they are quite readable and understandable in my opinion.
+and merges the data. It also provides the merged data with some human readable labels for activity and the column names. 
 
 To save some time importing the data, the function tries to read only 
 the necessary part of the data out of the files. This way
@@ -50,7 +74,7 @@ is listed:
    each variable containing the mean and standard deviation of the measurements
    (labels with the lowercase text "mean" or "std"). 
 1. Delete unnecessary symbols in the variable labels (here: opening and closing
-   parenthesis)
+   parenthesis) and make them more human readable.
 1. Read only the required columns (see step 1) of training and test sets 
    using fixed width format. Due to memory shortage while using the function
    `read.fwf()`, I used an additional package called "LaF".

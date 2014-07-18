@@ -2,233 +2,231 @@
 
 The list below is formatted as follows:
 ```
-<variable name>         <variable type>
+<variable name>         
     <description>
-                        <domain>
+        <variable type> <domain>
 ```
+
+Every frequency signal was calculated by transforming the time domain signal s
+into  frequency domain signals using the Fast Fourier Transform (FFT).
       
 ```
-subject                 factor 
+subject                 
     Id of subject participated in the experiment
-                        1..30
+        factor          1..30
 
-activity                factor
+activity                
     Activity the subject performed
-                        WALKING
+        factor          WALKING
                         WALKING_UPSTAIRS
                         WALKING_DOWNSTAIRS
                         SITTING
                         STANDING
                         LAYING
       
-tBodyAcc.mean.X                     
-tBodyAcc.mean.Y
-tBodyAcc.mean.Z         numeric 
-    Average of time domain signals of body accelerometer 
-    for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyAccelerometer.mean.X                     
+TimeSignal.BodyAccelerometer.mean.Y
+TimeSignal.BodyAccelerometer.mean.Z         
+    Average value of the mean values of the time domain signals 
+    of the body accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tBodyAcc.std.X                     
-tBodyAcc.std.Y
-tBodyAcc.std.Z          numeric 
-    Standard deviation of time domain signals of body accelerometer 
-    for X-, Y- and Z-axis.      
-                        -1.0 - 1.0
+TimeSignal.BodyAccelerometer.std.X                     
+TimeSignal.BodyAccelerometer.std.Y
+TimeSignal.BodyAccelerometer.std.Z           
+    Average value of the standard deviation values of the time domain signals 
+    of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0
     
-tGravityAcc.mean.X                     
-tGravityAcc.mean.Y
-tGravityAcc.mean.Z      numeric 
-    Average of time domain signals of gravity accelerometer 
-    for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.GravityAccelerometer.mean.X                     
+TimeSignal.GravityAccelerometer.mean.Y
+TimeSignal.GravityAccelerometer.mean.Z       
+    Average value of the mean values of the time domain signals 
+    of the gravity accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
     
-tGravityAcc.std.X                     
-tGravityAcc.std.Y
-tGravityAcc.std.Z       numeric 
-    Standard deviation of time domain signals of gravity accelerometer 
-    for X-, Y- and Z-axis.    
-                        -1.0 - 1.0
+TimeSignal.GravityAccelerometer.std.X                     
+TimeSignal.GravityAccelerometer.std.Y
+TimeSignal.GravityAccelerometer.std.Z        
+    Average value of the standard deviation values of the time domain signals 
+    of the gravity accelerometer for X-, Y- and Z-axis.    
+        numeric         -1.0 - 1.0
                   
-tBodyAccJerk.mean.X                     
-tBodyAccJerk.mean.Y
-tBodyAccJerk.mean.Z     numeric 
-    Average of Jerk signals of body accelerometer for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyAccelerometer.Jerk.mean.X                     
+TimeSignal.BodyAccelerometer.Jerk.mean.Y
+TimeSignal.BodyAccelerometer.Jerk.mean.Z      
+    Average value of the mean values of the Jerk signals 
+    of the body accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tBodyAccJerk.std.X                     
-tBodyAccJerk.std.Y
-tBodyAccJerk.std.Z      numeric 
-    Standard deviation of Jerk signals of body accelerometer 
-    for X-, Y- and Z-axis.      
-                        -1.0 - 1.0    
+TimeSignal.BodyAccelerometer.Jerk.std.X                     
+TimeSignal.BodyAccelerometer.Jerk.std.Y
+TimeSignal.BodyAccelerometer.Jerk.std.Z       
+    Average value of the standard deviation values of the Jerk signals 
+    of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0    
               
-tBodyGyro.mean.X                     
-tBodyGyro.mean.Y
-tBodyGyro.mean.Z        numeric 
-    Average of time domain signals of body gyroscope for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyGyroscope.mean.X                     
+TimeSignal.BodyGyroscope.mean.Y
+TimeSignal.BodyGyroscope.mean.Z         
+    Average value of the mean values of the time domain signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tBodyGyro.std.X                     
-tBodyGyro.std.Y
-tBodyGyro.std.Z         numeric 
-    Standard deviation of time domain signals of body gyroscope
-    for X-, Y- and Z-axis.      
-                        -1.0 - 1.0      
+TimeSignal.BodyGyroscope.std.X                     
+TimeSignal.BodyGyroscope.std.Y
+TimeSignal.BodyGyroscope.std.Z          
+    Average value of the standard deviation values of the time domain signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0      
                         
-tBodyGyroJerk.mean.X                     
-tBodyGyroJerk.mean.Y
-tBodyGyroJerk.mean.Z    numeric 
-    Average of Jerk signals of body gyroscope for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyGyroscope.Jerk.mean.X                     
+TimeSignal.BodyGyroscope.Jerk.mean.Y
+TimeSignal.BodyGyroscope.Jerk.mean.Z     
+    Average value of the mean values of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tBodyGyroJerk.std.X                     
-tBodyGyroJerk.std.Y
-tBodyGyroJerk.std.Z     numeric 
-    Standard deviation of Jerk signals of body gyroscope for X-, Y- and Z-axis.      
-                        -1.0 - 1.0 
+TimeSignal.BodyGyroscope.Jerk.std.X                     
+TimeSignal.BodyGyroscope.Jerk.std.Y
+TimeSignal.BodyGyroscope.Jerk.std.Z      
+    Average value of the standard deviation values of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0 
                         
-tBodyAccMag.mean        numeric 
-    Average of magnitude of time domain signals of body accelerometer 
-    for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyAcc.Magnitude.mean         
+    Average value of the mean values of the magnitude of the time domain signals
+    of the body accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tBodyAccMag.std         numeric 
-    Standard deviation of magnitude of time domain signals of body accelerometer 
-    for X-, Y- and Z-axis.      
-                        -1.0 - 1.0   
+TimeSignal.BodyAcc.Magnitude.std          
+    Average value of the standard deviation values of the magnitude 
+    of the time domain signals of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0   
                         
-tGravityAccMag.mean     numeric 
-    Average of magnitude of time domain signals of gravity accelerometer 
-    for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.GravityAcc.Magnitude.mean      
+    Average value of the mean values of the magnitude of the time domain signals
+    of the gravity accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tGravityAccMag.std      numeric 
-    Standard deviation of magnitude of time domain signals 
-    of gravity accelerometer for X-, Y- and Z-axis.      
-                        -1.0 - 1.0 
-
-tBodyAccJerkMag.mean    numeric 
-    Average of magnitude of Jerk signals of body accelerometer 
-    for X-, Y- and Z-axis.
-                        -1.0 - 1.0
-                  
-tBodyAccJerkMag.std     numeric 
-    Standard deviation of magnitude of Jerk signals of body accelerometer 
+TimeSignal.GravityAcc.Magnitude.std       
+    Average value of the standard deviation of the magnitude 
+    of the time domain signals of the gravity accelerometer 
     for X-, Y- and Z-axis.      
-                        -1.0 - 1.0  
+        numeric         -1.0 - 1.0 
 
-tBodyGyroMag.mean       numeric 
-    Average of magnitude of time domain signals of body gyroscope
-    for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyAccJerk.Magnitude.mean     
+    Average value of the mean values of the magnitude of the Jerk signals 
+    of the body accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tBodyGyroMag.std        numeric 
-    Standard deviation of magnitude of time domain signals of body gyroscope 
-    for X-, Y- and Z-axis.      
-                        -1.0 - 1.0   
+TimeSignal.BodyAccJerk.Magnitude.std      
+    Average value of the standard deviation values of the magnitude 
+    of the Jerk signals of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0  
 
-tBodyGyroJerkMag.mean   numeric 
-    Average of magnitude of Jerk signals of body gyroscope 
-    for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyGyroscope.Magnitude.mean        
+    Average value of the mean values of the magnitude of the time domain signals
+    of the body Gyroscopescope for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-tBodyGyroJerkMag.std    numeric 
-    Standard deviation of magnitude of Jerk signals of body gyroscope
-    for X-, Y- and Z-axis.      
-                        -1.0 - 1.0  
+TimeSignal.BodyGyroscope.Magnitude.std         
+    Average value of the standard deviation values of the magnitude 
+    of the time domain signals of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0   
 
-fBodyAcc.mean.X                     
-fBodyAcc.mean.Y
-fBodyAcc.mean.Z         numeric 
-    Average of Fast Fourier transformed time domain signals 
-    of body accelerometer for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+TimeSignal.BodyGyroscopeJerk.Magnitude.mean    
+    Average value of the meanu values of the magnitude of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-fBodyAcc.std.X                     
-fBodyAcc.std.Y
-fBodyAcc.std.Z          numeric 
-    Standard deviation of Fast Fourier transformed time domain signals 
-    of body accelerometer for X-, Y- and Z-axis.      
-                        -1.0 - 1.0
+TimeSignal.BodyGyroscopeJerk.Magnitude.std     
+    Average value of the standard deviation values of the magnitude 
+    of the Jerk signals of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0  
 
-fBodyAccJerk.mean.X                     
-fBodyAccJerk.mean.Y
-fBodyAccJerk.mean.Z     numeric 
-    Average of Jerk signals of body accelerometer for X-, Y- and Z-axis.
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0
+FrequencySignal.BodyAccelerometer.mean.X                     
+FrequencySignal.BodyAccelerometer.mean.Y
+FrequencySignal.BodyAccelerometer.mean.Z          
+    Average value of the mean values of the frequency domain signals 
+    of the body accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-fBodyAccJerk.std.X                     
-fBodyAccJerk.std.Y
-fBodyAccJerk.std.Z      numeric 
-    Standard deviation of Jerk signals of body accelerometer 
-    for X-, Y- and Z-axis.      
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0  
+FrequencySignal.BodyAccelerometer.std.X                     
+FrequencySignal.BodyAccelerometer.std.Y
+FrequencySignal.BodyAccelerometer.std.Z           
+    Average value of the standard deviation values of the frequency domain 
+    signals of the body accelerometer for X-, Y- and Z-axis.      
+                                 numeric         -1.0 - 1.0
 
-fBodyGyroJerk.mean.X                     
-fBodyGyroJerk.mean.Y
-fBodyGyroJerk.mean.Z    numeric 
-    Average of Jerk signals of body gyroscope for X-, Y- and Z-axis.
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0
+FrequencySignal.BodyAccelerometer.Jerk.mean.X                     
+FrequencySignal.BodyAccelerometer.Jerk.mean.Y
+FrequencySignal.BodyAccelerometer.Jerk.mean.Z     
+    Average value of the mean values of the Jerk signals 
+    of the body accelerometer for X-, Y- and Z-axis.
+                                 numeric         -1.0 - 1.0
                   
-fBodyGyroJerk.std.X                     
-fBodyGyroJerk.std.Y
-fBodyGyroJerk.std.Z     numeric 
-    Standard deviation of Jerk signals of body gyroscope for X-, Y- and Z-axis.      
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0 
+FrequencySignal.BodyAccelerometer.Jerk.std.X                     
+FrequencySignal.BodyAccelerometer.Jerk.std.Y
+FrequencySignal.BodyAccelerometer.Jerk.std.Z      
+    Average value of the standard deviation values of the Jerk signals 
+    of the body accelerometer for X-, Y- and Z-axis.      
+                                 numeric         -1.0 - 1.0  
+
+FrequencySignal.BodyGyroscope.Jerk.mean.X                     
+FrequencySignal.BodyGyroscope.Jerk.mean.Y
+FrequencySignal.BodyGyroscope.Jerk.mean.Z     
+    Average value of the mean values of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
+                  
+FrequencySignal.BodyGyroscope.Jerk.std.X                     
+FrequencySignal.BodyGyroscope.Jerk.std.Y
+FrequencySignal.BodyGyroscope.Jerk.std.Z      
+    Average value of the standard deviation of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0 
                         
-fBodyAccMag.mean        numeric 
-    Average of magnitude of Fast Fouier transformed time domain signals 
-    of body accelerometer for X-, Y- and Z-axis.
-                        -1.0 - 1.0
+FrequencySignal.BodyAcc.Magnitude.mean         
+    Average value of the mean values of the magnitude of the frequency domain 
+    signals of the body accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
                   
-fBodyAccMag.std         numeric 
-    Standard deviation of magnitude of Fast Fourier transformed time domain   
-    signals of body accelerometer for X-, Y- and Z-axis.      
-                        -1.0 - 1.0   
-
-fBodyAccJerkMag.mean    numeric 
-    Average of magnitude of Jerk signals of body accelerometer 
-    for X-, Y- and Z-axis.
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0
-                  
-fBodyAccJerkMag.std     numeric 
-    Standard deviation of magnitude of Jerk signals of body accelerometer 
+FrequencySignal.BodyAcc.Magnitude.std          
+    Average value of the standard deviation values of the magnitude of 
+    the frequency domain signals of the body accelerometer 
     for X-, Y- and Z-axis.      
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0 
+        numeric         -1.0 - 1.0   
+
+FrequencySignal.BodyAccJerk.Magnitude.mean     
+    Average value of the mean values of the magnitude of the Jerk signals 
+    of the body accelerometer for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
+                  
+FrequencySignal.BodyAccJerk.Magnitude.std      
+    Average value of the standard deviation values of the magnitude 
+    of the Jerk signals of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0 
                         
-fBodyGyroMag.mean       numeric 
-    Average of magnitude of Fast Fourier transformed time domain signals 
-    of body gyroscope for X-, Y- and Z-axis.
-                        -1.0 - 1.0
-                  
-fBodyGyroMag.std        numeric 
-    Standard deviation of magnitude of Fast Fourier transformed time domain 
-    signals of body gyroscope for X-, Y- and Z-axis.      
-                        -1.0 - 1.0   
-
-tBodyGyroJerkMag.mean   numeric 
-    Average of magnitude of Jerk signals of body gyroscope 
+FrequencySignal.BodyGyroscope.Magnitude.mean        
+    Average value of the mean values of the magnitude 
+    of the frequency domain signals of the body Gyroscopescope 
     for X-, Y- and Z-axis.
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0
+        numeric         -1.0 - 1.0
                   
-tBodyGyroJerkMag.std    numeric 
-    Standard deviation of magnitude of Jerk signals of body gyroscope
+FrequencySignal.BodyGyroscope.Magnitude.std         
+    Average value of the standard deviation values of the magnitude 
+    of the frequency domain signals of the body Gyroscopescope 
     for X-, Y- and Z-axis.      
-    The time domain signals used to calculate the Jerk signals were transformed
-    using the Fast Fourier Transform.
-                        -1.0 - 1.0                          
+        numeric         -1.0 - 1.0   
+
+FrequencySignal.BodyGyroscopeJerk.Magnitude.mean    
+    Average value of the mean values of the magnitude of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.
+        numeric         -1.0 - 1.0
+                  
+FrequencySignal.BodyGyroscopeJerk.Magnitude.std     
+    Average value of the standard deviation of the magnitude of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0                          
 ```
