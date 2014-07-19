@@ -94,33 +94,33 @@ TimeSignal.BodyGyroscope.Jerk.std.Z
     of the body Gyroscopescope for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0 
                         
-TimeSignal.BodyAcc.Magnitude.mean         
+TimeSignal.BodyAccelerometer.Magnitude.mean         
     Average value of the mean values of the magnitude of the time domain signals
     of the body accelerometer for X-, Y- and Z-axis.
         numeric         -1.0 - 1.0
                   
-TimeSignal.BodyAcc.Magnitude.std          
+TimeSignal.BodyAccelerometer.Magnitude.std          
     Average value of the standard deviation values of the magnitude 
     of the time domain signals of the body accelerometer for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0   
                         
-TimeSignal.GravityAcc.Magnitude.mean      
+TimeSignal.GravityAccelerometer.Magnitude.mean      
     Average value of the mean values of the magnitude of the time domain signals
     of the gravity accelerometer for X-, Y- and Z-axis.
         numeric         -1.0 - 1.0
                   
-TimeSignal.GravityAcc.Magnitude.std       
+TimeSignal.GravityAccelerometer.Magnitude.std       
     Average value of the standard deviation of the magnitude 
     of the time domain signals of the gravity accelerometer 
     for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0 
 
-TimeSignal.BodyAccJerk.Magnitude.mean     
+TimeSignal.BodyAccelerometer.Jerk.Magnitude.mean     
     Average value of the mean values of the magnitude of the Jerk signals 
     of the body accelerometer for X-, Y- and Z-axis.
         numeric         -1.0 - 1.0
                   
-TimeSignal.BodyAccJerk.Magnitude.std      
+TimeSignal.BodyAccelerometer.Jerk.Magnitude.std      
     Average value of the standard deviation values of the magnitude 
     of the Jerk signals of the body accelerometer for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0  
@@ -135,12 +135,12 @@ TimeSignal.BodyGyroscope.Magnitude.std
     of the time domain signals of the body Gyroscopescope for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0   
 
-TimeSignal.BodyGyroscopeJerk.Magnitude.mean    
+TimeSignal.BodyGyroscope.Jerk.Magnitude.mean    
     Average value of the meanu values of the magnitude of the Jerk signals 
     of the body Gyroscopescope for X-, Y- and Z-axis.
         numeric         -1.0 - 1.0
                   
-TimeSignal.BodyGyroscopeJerk.Magnitude.std     
+TimeSignal.BodyGyroscope.Jerk.Magnitude.std     
     Average value of the standard deviation values of the magnitude 
     of the Jerk signals of the body Gyroscopescope for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0  
@@ -157,21 +157,35 @@ FrequencySignal.BodyAccelerometer.std.Y
 FrequencySignal.BodyAccelerometer.std.Z           
     Average value of the standard deviation values of the frequency domain 
     signals of the body accelerometer for X-, Y- and Z-axis.      
-                                 numeric         -1.0 - 1.0
+        numeric         -1.0 - 1.0
 
+FrequencySignal.BodyAccelerometer.meanFreq.X        
+FrequencySignal.BodyAccelerometer.meanFreq.Y             
+FrequencySignal.BodyAccelerometer.meanFreq.Z
+    Average value of the mean frequency of the frequency domain 
+    signals of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0
+                                 
 FrequencySignal.BodyAccelerometer.Jerk.mean.X                     
 FrequencySignal.BodyAccelerometer.Jerk.mean.Y
 FrequencySignal.BodyAccelerometer.Jerk.mean.Z     
     Average value of the mean values of the Jerk signals 
     of the body accelerometer for X-, Y- and Z-axis.
-                                 numeric         -1.0 - 1.0
+        numeric         -1.0 - 1.0
                   
 FrequencySignal.BodyAccelerometer.Jerk.std.X                     
 FrequencySignal.BodyAccelerometer.Jerk.std.Y
 FrequencySignal.BodyAccelerometer.Jerk.std.Z      
     Average value of the standard deviation values of the Jerk signals 
     of the body accelerometer for X-, Y- and Z-axis.      
-                                 numeric         -1.0 - 1.0  
+        numeric         -1.0 - 1.0 
+        
+FrequencySignal.BodyAccelerometer.Jerk.meanFreq.X
+FrequencySignal.BodyAccelerometer.Jerk.meanFreq.Y        
+FrequencySignal.BodyAccelerometer.Jerk.meanFreq.Z
+    Average value of the mean frequency of the Jerk signals 
+    of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0 
 
 FrequencySignal.BodyGyroscope.Jerk.mean.X                     
 FrequencySignal.BodyGyroscope.Jerk.mean.Y
@@ -186,25 +200,43 @@ FrequencySignal.BodyGyroscope.Jerk.std.Z
     Average value of the standard deviation of the Jerk signals 
     of the body Gyroscopescope for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0 
-                        
-FrequencySignal.BodyAcc.Magnitude.mean         
+  
+FrequencySignal.BodyGyroscope.Jerk.meanFreq.X                     
+FrequencySignal.BodyGyroscope.Jerk.meanFreq.Y
+FrequencySignal.BodyGyroscope.Jerk.meanFreq.Z      
+    Average value of the mean frequency of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0   
+  
+FrequencySignal.BodyAccelerometer.Magnitude.mean         
     Average value of the mean values of the magnitude of the frequency domain 
     signals of the body accelerometer for X-, Y- and Z-axis.
         numeric         -1.0 - 1.0
                   
-FrequencySignal.BodyAcc.Magnitude.std          
+FrequencySignal.BodyAccelerometer.Magnitude.std          
     Average value of the standard deviation values of the magnitude of 
     the frequency domain signals of the body accelerometer 
     for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0   
+        
+FrequencySignal.BodyAccelerometer.Magnitude.meanFreq        
+    Average value of the mean frequency of the magnitude of 
+    the frequency domain signals of the body accelerometer 
+    for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0  
 
-FrequencySignal.BodyAccJerk.Magnitude.mean     
+FrequencySignal.BodyAccelerometer.Jerk.Magnitude.mean     
     Average value of the mean values of the magnitude of the Jerk signals 
     of the body accelerometer for X-, Y- and Z-axis.
         numeric         -1.0 - 1.0
                   
-FrequencySignal.BodyAccJerk.Magnitude.std      
+FrequencySignal.BodyAccelerometer.Jerk.Magnitude.std      
     Average value of the standard deviation values of the magnitude 
+    of the Jerk signals of the body accelerometer for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0 
+        
+FrequencySignal.BodyAccelerometer.Jerk.Magnitude.meanFreq  
+    Average value of the mean frequency of the magnitude 
     of the Jerk signals of the body accelerometer for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0 
                         
@@ -219,14 +251,25 @@ FrequencySignal.BodyGyroscope.Magnitude.std
     of the frequency domain signals of the body Gyroscopescope 
     for X-, Y- and Z-axis.      
         numeric         -1.0 - 1.0   
+        
+FrequencySignal.BodyGyroscope.Magnitude.meanFreq       
+    Average value of the mean frequency of the magnitude 
+    of the frequency domain signals of the body Gyroscopescope 
+    for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0   
 
-FrequencySignal.BodyGyroscopeJerk.Magnitude.mean    
+FrequencySignal.BodyGyroscope.Jerk.Magnitude.mean    
     Average value of the mean values of the magnitude of the Jerk signals 
     of the body Gyroscopescope for X-, Y- and Z-axis.
         numeric         -1.0 - 1.0
                   
-FrequencySignal.BodyGyroscopeJerk.Magnitude.std     
+FrequencySignal.BodyGyroscope.Jerk.Magnitude.std     
     Average value of the standard deviation of the magnitude of the Jerk signals 
     of the body Gyroscopescope for X-, Y- and Z-axis.      
-        numeric         -1.0 - 1.0                          
+        numeric         -1.0 - 1.0             
+        
+FrequencySignal.BodyGyroscope.Jerk.Magnitude.meanFreq
+    Average value of the mean frequency of the magnitude of the Jerk signals 
+    of the body Gyroscopescope for X-, Y- and Z-axis.      
+        numeric         -1.0 - 1.0   
 ```
