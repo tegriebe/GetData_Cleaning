@@ -23,9 +23,7 @@ ReadAndMergeData <- function() {
                       col.names=c("id", "text"),
                       colClasses=c("NULL", "character"))
   # Assemble necessary column indices for reading training and test sets
-  error.indices <- grep("(Body)\\1", label$text)
   column.indices <- grep("mean|std", label$text)
-  column.indices <- column.indices[which(!(column.indices %in% error.indices))]  
   
   # Edit column names to make them human readable
   label$text <- gsub("\\(\\)", "", label$text)
@@ -35,6 +33,7 @@ ReadAndMergeData <- function() {
   label$text <- gsub("Gyro", "Gyroscope", label$text)
   label$text <- gsub("Jerk", ".Jerk", label$text)
   label$text <- gsub("Mag", ".Magnitude", label$text)
+  label$text <- gsub("(Body)\\1", "\\1", label$text)
   
   # import training and test set
   laf.output <- laf_open_fwf("UCI HAR Dataset/train/X_train.txt",
