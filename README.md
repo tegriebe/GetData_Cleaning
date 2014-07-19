@@ -40,8 +40,6 @@ name, just change the second parameter of the function call
 to `ExportDataAsFile()`.
 
 
-
-
 Detailed description of the R scripts
 ----------------------------
 In this section a detailed description of each script is given. For a detailed
@@ -78,8 +76,8 @@ is listed:
 1. Read subject and activity for both training and test scenario and 
    merge them to the training and test set. Additionally a extra column called
    "set.type" is added that labels the data sets as "training" or "test" sets. 
-   Thereby no information is lost when joining training and test set in the next
-   step to one merged data set.
+   Thereby no information is lost when joining training and test set into  one
+   merged data set in the next step.
 1. Merge training and test set to one data set. Also the column subject is
    set to "factor"-class.
 1. Read the activity labels and relabel the factor column "activity" to
